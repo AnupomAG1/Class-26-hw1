@@ -1,0 +1,136 @@
+
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@700&family=Poppins:wght@300;400;500;600;700&display=swap');
+/* ^^^Font link ^^^ */
+
+:root{
+    /* Font variables */
+    --primary-font: "Poppins", sans-serif;
+    --secondary-font: "PT Sans", sans-serif;
+    /* Color varibles */
+    --primary-color:#FFCC00;
+    --secondary-color: #353535;
+    /* transition variables */
+    --primary-transition: 300ms;
+}
+
+.preloader{
+    position: fixed;
+    background-color: #000000a2;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+
+/* COMMON CSS STARTS  */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul,ol{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+h1,h2,h3,h4,h5,h6,ul,ol,p,span{
+margin: 0;
+padding: 0;
+}
+/* COMMON CSS ENDS */
+
+/* .box{
+    width: 100px;
+    height: 100px;
+    background: red;
+} */
+
+body{
+    background-image:url(../Images/FAQ-Header-2.gif)
+}
+#FaqWrapper{
+    padding: 150px 0px;
+  
+}
+#FaqWrapper .faq{
+    /* border: 1px solid black;
+    background-color: rgba(0, 0, 0, 0.055);
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 10px; */  background-color: #000000d2;
+    background-blend-mode:difference;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+#FaqWrapper .faq .faqBody{
+ border: 1px solid black;
+    /* background-color: rgba(0, 0, 0, 0.055); */
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 10px;
+    padding: 10px;
+    opacity: 0;
+    visibility: hidden;
+    height: 0;
+    overflow: auto;
+background-color: #FFCC00;
+    
+}
+#FaqWrapper .faq.active .faqBody{
+ 
+height:auto;
+    visibility: visible;
+    opacity: 100;
+    transition: 300ms ease-in;
+    
+}
+#FaqWrapper .faq.active .faqHeader span{
+    transition: 300ms;
+ 
+/* visibility: hidden; */
+}
+#FaqWrapper .faq .faqHeader h4{
+    padding: 10px;
+}
+#FaqWrapper .faq .faqHeader{
+    padding-left: 20px;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    background-color: #ffffff7a;
+    margin: 0px !important;
+    border: 1px solid black;
+    cursor: pointer;
+    position: relative;
+ 
+    
+   
+    
+}
+#FaqWrapper .faq .faqHeader:hover{
+
+    background-color: #ffffff;
+    
+}
+
+#FaqWrapper .faq .faqHeader svg{
+    margin-right: 5px;
+    color: #000000;
+    background-color: rgb(255, 255, 255);
+    
+}
+#FaqWrapper .faq .faqHeader svg:nth-child(1){
+    visibility: hidden;
+}
+#FaqWrapper .faq.active .faqHeader svg:nth-child(1){
+    margin-right: 5px;
+    color: #000000;
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    margin-top: 7px;
+    visibility: visible;
+}
